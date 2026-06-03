@@ -7,17 +7,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
+  <!-- ============ GİRİŞ / KAYIT EKRANI ============ -->
+  <div class="app" id="auth-view" hidden>
     <h1>📝 Yapılacaklar</h1>
 
+    <div class="tabs">
+      <button class="tab active" data-tab="login">Giriş Yap</button>
+      <button class="tab" data-tab="signup">Kayıt Ol</button>
+    </div>
+
+    <form id="auth-form">
+      <input type="email" id="email" placeholder="E-posta adresin" autocomplete="email" required>
+      <input type="password" id="password" placeholder="Şifre (en az 6 karakter)" autocomplete="current-password" minlength="6" required>
+      <button type="submit" id="auth-submit">Giriş Yap</button>
+    </form>
+
+    <p class="message" id="auth-message"></p>
+  </div>
+
+  <!-- ============ UYGULAMA EKRANI ============ -->
+  <div class="app" id="app-view" hidden>
+    <div class="topbar">
+      <h1>📝 Yapılacaklar</h1>
+      <div class="user-box">
+        <span id="user-email"></span>
+        <button id="logout-btn">Çıkış</button>
+      </div>
+    </div>
+
     <form id="todo-form" class="input-row">
-      <input
-        type="text"
-        id="todo-input"
-        placeholder="Yeni görev ekle..."
-        autocomplete="off"
-        maxlength="200"
-      >
+      <input type="text" id="todo-input" placeholder="Yeni görev ekle..." autocomplete="off" maxlength="200">
       <button type="submit">Ekle</button>
     </form>
 
@@ -35,7 +54,9 @@
     </div>
   </div>
 
-  <!-- Supabase kütüphanesi (internetten yüklenir) -->
+  <!-- Açılışta oturum kontrol edilirken gösterilir -->
+  <div class="loading" id="loading">Yükleniyor…</div>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="script.js"></script>
 </body>

@@ -30,6 +30,128 @@ h1 {
   color: #333;
 }
 
+/* ===== Açılış / oturum kontrolü ===== */
+.loading {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 40px;
+}
+
+/* ===== Giriş / Kayıt ekranı ===== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: #f2f2f5;
+  color: #555;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: #764ba2;
+  color: #fff;
+}
+
+#auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#auth-form input {
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#auth-form input:focus {
+  border-color: #764ba2;
+}
+
+#auth-form button {
+  padding: 13px;
+  background: #764ba2;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#auth-form button:hover {
+  background: #5e3a82;
+}
+
+#auth-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.message {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  text-align: center;
+  color: #555;
+}
+
+.message:empty {
+  display: none;
+}
+
+.message.error {
+  color: #c0392b;
+}
+
+.message.success {
+  color: #1e7e4f;
+  background: #eafaf1;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* ===== Üst bar (kullanıcı + çıkış) ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+#logout-btn {
+  padding: 6px 12px;
+  background: #f2f2f5;
+  color: #764ba2;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#logout-btn:hover {
+  background: #e6e6ee;
+}
+
 .input-row {
   display: flex;
   gap: 8px;

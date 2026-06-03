@@ -1,0 +1,7 @@
+# Gizli — veritabanı şifresi (asla yayınlama)
+.db-password.txt
+
+# Yerel ortam / araç dosyaları
+.claude/
+supabase/.temp/
+.DS_Store

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yapılacaklar Listesi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>📝 Yapılacaklar</h1>
+
+    <form id="todo-form" class="input-row">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="Yeni görev ekle..."
+        autocomplete="off"
+        maxlength="200"
+      >
+      <button type="submit">Ekle</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">Tümü</button>
+      <button class="filter" data-filter="active">Aktif</button>
+      <button class="filter" data-filter="done">Tamamlanan</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div class="footer">
+      <span id="count">0 görev</span>
+      <button id="clear-done">Tamamlananları temizle</button>
+    </div>
+  </div>
+
+  <!-- Supabase kütüphanesi (internetten yüklenir) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

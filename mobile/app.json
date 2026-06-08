@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Todo",
+    "slug": "todo-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#764ba2"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "newArchEnabled": true
+  }
+}
